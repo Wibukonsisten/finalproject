@@ -1,0 +1,266 @@
+:root {
+  --primary: #365e32;
+  --bg: #81a263;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary);
+  background-color: var(--bg);
+}
+
+/* Navbar */
+.navigation {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+.navbar1 {
+  box-shadow: 0px 11px 20px 0px rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(129, 162, 99, 1);
+  border-bottom: 1px solid #513c58;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  text-decoration: none;
+}
+
+.navbar1 a {
+  text-decoration: none;
+}
+
+.navbar1 .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #365e32;
+}
+
+.navbar1 .navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar1 .navbar-menu a {
+  color: #365e32;
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0 1rem;
+  position: relative;
+  text-decoration: none;
+}
+
+.navbar1 .navbar-menu a:hover {
+  color: #fff;
+}
+
+.navbar-login {
+  font-family: Inter, sans-serif;
+  display: flex;
+  gap: 20px;
+  font-size: 1.4rem;
+  justify-content: space-between;
+}
+
+.navbar-login a {
+  color: #365e32;
+  text-decoration: none;
+}
+
+.navbar-login a:hover {
+  color: #fff;
+}
+
+.login a {
+  font-family: Inter, sans-serif;
+  border-radius: 80px;
+  background-color: #365e32;
+  color: #fff;
+  justify-content: center;
+  padding: 8px 32px;
+}
+
+#hero {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  background-image: url(Assets/hero1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(129, 162, 99, 1) 8%,
+    rgba(129, 162, 99, 0) 50%
+  );
+  border-bottom: 20px solid rgba(129, 162, 99, 1);
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(129, 162, 99, 0.8);
+}
+
+#hero h1,
+p {
+  text-shadow: 1px 1px 20px rgba(129, 162, 99, 0.8);
+}
+
+.container {
+  padding: 10px 0;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.btn-get-started {
+  font-family: Inter, sans-serif !important;
+  border-radius: 80px;
+  background-color: #365e32;
+  color: #fff;
+  justify-content: center;
+  padding: 8px 32px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  box-shadow: 10px 4px 70px 0px rgba(0, 0, 0, 0.6);
+}
+
+.btn-get-started:hover {
+  color: #2b4a29;
+}
+
+.hero2 h3,
+.hero2 p {
+  color: white !important;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--bg);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  width: 100%;
+  border-top: 1px solid white;
+}
+
+footer .socials {
+  padding: 0.7rem 1rem;
+}
+
+footer .socials a {
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem 0.5rem;
+  align-items: left;
+}
+
+footer .socials a:hover {
+  color: #2b4a29;
+}
+footer .links a:hover {
+  color: #2b4a29;
+}
+
+footer .links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  padding-top: 1rem;
+  font-size: 1rem;
+  color: white;
+  font-weight: 400px;
+}
+
+footer .credit {
+  color: white;
+  font-weight: 400px;
+}
+/*responsive web*/
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: block;
+  }
+
+  .navbar1 .navbar-menu {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #81a263;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar1 .navbar-menu.active {
+    right: 0;
+    display: block;
+  }
+
+  .navbar1 .navbar-menu a {
+    color: var(--primary);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+}
+
+/* mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
